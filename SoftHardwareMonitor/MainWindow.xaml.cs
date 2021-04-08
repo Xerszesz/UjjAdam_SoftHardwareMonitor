@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Management;
 
 namespace SoftHardwareMonitor
 {
@@ -20,9 +21,25 @@ namespace SoftHardwareMonitor
     /// </summary>
     public partial class MainWindow : Window
     {
+        System.Windows.Threading.DispatcherTimer idomero = new System.Windows.Threading.DispatcherTimer();
         public MainWindow()
         {
             InitializeComponent();
+            idomero.Tick += new EventHandler(Idozito_Tick);
+            idomero.Interval = new TimeSpan(0, 0, 1);
+            idomero.Start();
+        }
+
+        private void Idozito_Tick(object sender, EventArgs e)
+        {
+            GetTime();
+        }
+
+        private void GetTime()
+        {
+            DateTime date;
+            date = DateTime.Now;
+            Ora.Text = date.ToLongTimeString() + "  " + date.ToLongDateString();
         }
     }
 }
