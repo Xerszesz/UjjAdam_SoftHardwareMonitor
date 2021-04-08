@@ -28,6 +28,8 @@ namespace SoftHardwareMonitor
             idomero.Tick += new EventHandler(Idozito_Tick);
             idomero.Interval = new TimeSpan(0, 0, 1);
             idomero.Start();
+
+            GetOpsysteminfo();
         }
 
         private void Idozito_Tick(object sender, EventArgs e)
@@ -40,6 +42,18 @@ namespace SoftHardwareMonitor
             DateTime date;
             date = DateTime.Now;
             Ora.Text = date.ToLongTimeString() + "  " + date.ToLongDateString();
+        }
+
+        private void GetOpsysteminfo()
+        {
+            ManagementClass wmi = new ManagementClass("Win32_ComputerSystem");
+            var providers = wmi.GetInstances();
+
+            foreach (var provider in providers)
+            {
+                string Systeminfo = provider["SystemType"].ToString();
+                SystemTypetb.Text = "Operációs Rendszer típus:" + "" + Systeminfo.ToString();
+            }
         }
     }
 }
