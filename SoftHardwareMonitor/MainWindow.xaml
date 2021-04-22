@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800" Background="Black">
     <Grid>
         <TextBlock x:Name="Ora" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="450,281,0,0" TextWrapping="NoWrap" Text="CPU Section" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="450,220,0,0" TextWrapping="NoWrap" Text="CPU Section" VerticalAlignment="Top" Foreground="White"/>
         <TextBlock HorizontalAlignment="Left" Margin="22,111,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
         <TextBlock HorizontalAlignment="Left" Margin="22,162,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
         <TextBlock x:Name="SystemTypetb" HorizontalAlignment="Left" Margin="22,382,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
@@ -25,6 +25,9 @@
         <TextBlock x:Name="CPU_Status" HorizontalAlignment="Left" Margin="450,325,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
         <TextBlock x:Name="CPU_Clockspeed" HorizontalAlignment="Left" Margin="450,346,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
         <TextBlock x:Name="CPU_Family" HorizontalAlignment="Left" Margin="450,367,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="CPU_Check" Content="Check" HorizontalAlignment="Left" Margin="538,218,0,0" VerticalAlignment="Top" Width="75" Click="CPU_Check_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,218,0,0" TextWrapping="NoWrap" Text="Oprendszer Section" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="Op_Check" Content="Check" HorizontalAlignment="Left" Margin="143,218,0,0" VerticalAlignment="Top" Width="75" Click="Op_Check_Click"/>
 
     </Grid>
 </Window>

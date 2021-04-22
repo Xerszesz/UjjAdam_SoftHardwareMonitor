@@ -30,8 +30,6 @@ namespace SoftHardwareMonitor
             idomero.Interval = new TimeSpan(0, 0, 1);
             idomero.Start();
 
-            GetOpsysteminfo();
-            GetProcessorInfo();
         }
 
         private void Idozito_Tick(object sender, EventArgs e)
@@ -72,6 +70,16 @@ namespace SoftHardwareMonitor
                 CPU_Clockspeed.Text = "CPU Clockspeed:" + "" + CpuClockspeed.ToString();
                 CPU_Family.Text = "CPU Család:" + "" + Family.ToString();
             }
+        }
+
+        private void CPU_Check_Click(object sender, RoutedEventArgs e)
+        {
+            GetProcessorInfo();
+        }
+
+        private void Op_Check_Click(object sender, RoutedEventArgs e)
+        {
+            GetOpsysteminfo();
         }
     }
 }
