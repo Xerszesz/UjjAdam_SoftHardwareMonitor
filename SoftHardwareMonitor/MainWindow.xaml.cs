@@ -115,5 +115,11 @@ namespace SoftHardwareMonitor
         {
             GetGPUinfo();
         }
+
+        private void SoftwareTab_Click(object sender, RoutedEventArgs e)
+        {
+            Window Softwareablak = new Window();
+            Softwareablak.Show();
+        }
     }
 }

@@ -37,6 +37,7 @@
         <TextBlock x:Name="GPU_DeviceID" HorizontalAlignment="Left" Margin="450,68,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
         <TextBlock x:Name="GPU_Driverversion" HorizontalAlignment="Left" Margin="450,89,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
         <TextBlock x:Name="GPU_VideoMemoryType" HorizontalAlignment="Left" Margin="450,110,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="SoftwareTab" Content="Software" HorizontalAlignment="Left" Margin="717,0,0,0" VerticalAlignment="Top" Width="75" Click="SoftwareTab_Click"/>
 
     </Grid>
 </Window>
