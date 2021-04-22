@@ -5,13 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SoftHardwareMonitor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="Black">
     <Grid>
-        <TextBlock x:Name="Ora" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="22,70,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="22,111,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="22,162,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock x:Name="SystemTypetb" HorizontalAlignment="Left" Margin="22,382,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Ora" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="450,281,0,0" TextWrapping="NoWrap" Text="CPU Section" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,111,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,162,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="SystemTypetb" HorizontalAlignment="Left" Margin="22,382,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
+        <ProgressBar x:Name="CPUusagebar" HorizontalAlignment="Left" Height="18" Margin="439,39,0,0" Width="145" Value="52" RenderTransformOrigin="0.498,0.478" VerticalAlignment="Top" Background="#FF383737" Foreground="#FF0B37FD">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.284"/>
+                    <TranslateTransform X="0.012" Y="-0.011"/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <TextBlock x:Name="CPU_Status" HorizontalAlignment="Left" Margin="450,325,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="CPU_Clockspeed" HorizontalAlignment="Left" Margin="450,346,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="CPU_Family" HorizontalAlignment="Left" Margin="450,367,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
 
     </Grid>
 </Window>

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Management;
+using System.Diagnostics;
 
 namespace SoftHardwareMonitor
 {
@@ -30,6 +31,7 @@ namespace SoftHardwareMonitor
             idomero.Start();
 
             GetOpsysteminfo();
+            GetProcessorInfo();
         }
 
         private void Idozito_Tick(object sender, EventArgs e)
@@ -52,7 +54,23 @@ namespace SoftHardwareMonitor
             foreach (var provider in providers)
             {
                 string Systeminfo = provider["SystemType"].ToString();
-                SystemTypetb.Text = "Operációs Rendszer típus:" + "" + Systeminfo.ToString();
+                SystemTypetb.Text = "Operációs Rendszer típus: " + "" + Systeminfo.ToString();
+            }
+        }
+
+        private void GetProcessorInfo()
+        {
+            ManagementClass wmi = new ManagementClass("Win32_Processor");
+            var providers = wmi.GetInstances();
+
+            foreach (var provider in providers)
+            {
+                int Family = Convert.ToInt16(provider["Family"]);
+                int CpuClockspeed = Convert.ToInt32(provider["CurrentClockSpeed"]);
+                string cpuStatus = Convert.ToString(provider["Status"]);
+                CPU_Status.Text = "CPU Státusz: " + "" + cpuStatus;
+                CPU_Clockspeed.Text = "CPU Clockspeed:" + "" + CpuClockspeed.ToString();
+                CPU_Family.Text = "CPU Család:" + "" + Family.ToString();
             }
         }
     }
