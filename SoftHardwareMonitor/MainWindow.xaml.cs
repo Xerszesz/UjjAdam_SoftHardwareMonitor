@@ -43,16 +43,40 @@ namespace SoftHardwareMonitor
             date = DateTime.Now;
             Ora.Text = date.ToLongTimeString() + "  " + date.ToLongDateString();
         }
-
-        private void GetOpsysteminfo()
+        private void GetGPUinfo()
         {
-            ManagementClass wmi = new ManagementClass("Win32_ComputerSystem");
+            ManagementClass wmi = new ManagementClass("Win32_VideoController");
             var providers = wmi.GetInstances();
 
             foreach (var provider in providers)
             {
-                string Systeminfo = provider["SystemType"].ToString();
-                SystemTypetb.Text = "Operációs Rendszer típus: " + "" + Systeminfo.ToString();
+                string Gpuname = provider["Name"].ToString();
+                string DeviceID = provider["DeviceID"].ToString();
+                string Driververs = provider["DriverVersion"].ToString();
+                
+                string Videomemotype = provider["VideoMemoryType"].ToString();
+                GPU_Name.Text = "Videó kártya neve: " + "" + Gpuname.ToString();
+                GPU_DeviceID.Text = "Videó kártya ID: " + "" + DeviceID.ToString();
+                GPU_Driverversion.Text = "Videó kártya Driver verzó: " + "" + Driververs.ToString();
+                
+                GPU_VideoMemoryType.Text = "Videó kártya Memória: " + "" + Videomemotype.ToString();
+            }
+        }
+        private void GetOpsysteminfo()
+        {
+            ManagementClass wmi = new ManagementClass("Win32_OperatingSystem");
+            var providers = wmi.GetInstances();
+
+            foreach (var provider in providers)
+            {
+                string Systemversion = provider["Version"].ToString();
+                string Systemname = provider["Caption"].ToString();
+                string Systemtype = provider["OSType"].ToString();
+                string sysdirectory = provider["SystemDirectory"].ToString();
+                SystemTypetb.Text = "Operációs Rendszer verzió: " + "" + Systemversion.ToString();
+                SystemName.Text = "Operációs Rendszer Neve: " + "" + Systemname.ToString();
+                SystemType.Text = "Operációs Rendszer típusa: " + "" + Systemtype.ToString();
+                Systemdirectory.Text = "Operációs Rendszer helye: " + "" + sysdirectory.ToString();
             }
         }
 
@@ -66,9 +90,14 @@ namespace SoftHardwareMonitor
                 int Family = Convert.ToInt16(provider["Family"]);
                 int CpuClockspeed = Convert.ToInt32(provider["CurrentClockSpeed"]);
                 string cpuStatus = Convert.ToString(provider["Status"]);
+                string cpuname = Convert.ToString(provider["Name"]);
+                string cpudivid = Convert.ToString(provider["DeviceID"]);
                 CPU_Status.Text = "CPU Státusz: " + "" + cpuStatus;
-                CPU_Clockspeed.Text = "CPU Clockspeed:" + "" + CpuClockspeed.ToString();
+                CPU_Clockspeed.Text = "CPU Current Clockspeed:" + "" + CpuClockspeed.ToString();
                 CPU_Family.Text = "CPU Család:" + "" + Family.ToString();
+                CPU_Name.Text = "CPU Név:" + "" + cpuname.ToString();
+                CPU_Device_ID.Text = "CPU ID:" + "" + cpudivid.ToString();
+                CPUclockspeed.Value = CpuClockspeed;
             }
         }
 
@@ -80,6 +109,11 @@ namespace SoftHardwareMonitor
         private void Op_Check_Click(object sender, RoutedEventArgs e)
         {
             GetOpsysteminfo();
+        }
+
+        private void GPU_Check_Click(object sender, RoutedEventArgs e)
+        {
+            GetGPUinfo();
         }
     }
 }

@@ -7,12 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="Black">
     <Grid>
-        <TextBlock x:Name="Ora" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="Ora" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="NoWrap" Text="Óra" VerticalAlignment="Top" Foreground="White"/>
         <TextBlock HorizontalAlignment="Left" Margin="450,220,0,0" TextWrapping="NoWrap" Text="CPU Section" VerticalAlignment="Top" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="22,111,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="22,162,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
-        <TextBlock x:Name="SystemTypetb" HorizontalAlignment="Left" Margin="22,382,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
-        <ProgressBar x:Name="CPUusagebar" HorizontalAlignment="Left" Height="18" Margin="439,39,0,0" Width="145" Value="52" RenderTransformOrigin="0.498,0.478" VerticalAlignment="Top" Background="#FF383737" Foreground="#FF0B37FD">
+        <TextBlock x:Name="GPU_Name" HorizontalAlignment="Left" Margin="450,47,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="SystemTypetb" HorizontalAlignment="Left" Margin="22,367,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <ProgressBar x:Name="CPUclockspeed" HorizontalAlignment="Left" Height="18" Margin="623,346,0,0" Width="145" RenderTransformOrigin="0.498,0.478" VerticalAlignment="Top" Background="#FF383737" Foreground="#FF0B37FD" Maximum="5000">
             <ProgressBar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -22,12 +21,22 @@
                 </TransformGroup>
             </ProgressBar.RenderTransform>
         </ProgressBar>
-        <TextBlock x:Name="CPU_Status" HorizontalAlignment="Left" Margin="450,325,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
-        <TextBlock x:Name="CPU_Clockspeed" HorizontalAlignment="Left" Margin="450,346,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
-        <TextBlock x:Name="CPU_Family" HorizontalAlignment="Left" Margin="450,367,0,0" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="CPU_Status" HorizontalAlignment="Left" Margin="450,325,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="CPU_Clockspeed" HorizontalAlignment="Left" Margin="450,346,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="CPU_Family" HorizontalAlignment="Left" Margin="450,367,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
         <Button x:Name="CPU_Check" Content="Check" HorizontalAlignment="Left" Margin="538,218,0,0" VerticalAlignment="Top" Width="75" Click="CPU_Check_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="22,218,0,0" TextWrapping="NoWrap" Text="Oprendszer Section" VerticalAlignment="Top" Foreground="White"/>
         <Button x:Name="Op_Check" Content="Check" HorizontalAlignment="Left" Margin="143,218,0,0" VerticalAlignment="Top" Width="75" Click="Op_Check_Click"/>
+        <TextBlock x:Name="CPU_Name" HorizontalAlignment="Left" Margin="450,304,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="CPU_Device_ID" HorizontalAlignment="Left" Margin="450,283,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="SystemName" HorizontalAlignment="Left" Margin="22,346,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="SystemType" HorizontalAlignment="Left" Margin="22,325,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="Systemdirectory" HorizontalAlignment="Left" Margin="22,304,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="450,13,0,0" TextWrapping="NoWrap" Text="GPU Section" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="GPU_Check" Content="Check" HorizontalAlignment="Left" Margin="538,11,0,0" VerticalAlignment="Top" Width="75" Click="GPU_Check_Click"/>
+        <TextBlock x:Name="GPU_DeviceID" HorizontalAlignment="Left" Margin="450,68,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="GPU_Driverversion" HorizontalAlignment="Left" Margin="450,89,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="GPU_VideoMemoryType" HorizontalAlignment="Left" Margin="450,110,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="White"/>
 
     </Grid>
 </Window>
