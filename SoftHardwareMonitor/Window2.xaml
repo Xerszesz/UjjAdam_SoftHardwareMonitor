@@ -5,17 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SoftHardwareMonitor"
         mc:Ignorable="d"
-        Title="Window2" Height="500.164" Width="670.628" Background="Black">
+        Title="Window2" Height="500.164" Width="738.251" Background="Black">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="399" VerticalAlignment="Top" Width="663">
-            <DataGrid.Columns>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Szoftver név" Width="250"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Verzió" Width="250"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Újabb Check" Width="250"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <DataGrid x:Name="SoftwareGrid" HorizontalAlignment="Left" Height="399" VerticalAlignment="Top" Width="720"/>
         <Button x:Name="Importbutton" Content="Import" HorizontalAlignment="Left" Margin="29,423,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button x:Name="Exportbutton" Content="Export" HorizontalAlignment="Left" Margin="563,423,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Exportbutton" Content="Export" HorizontalAlignment="Left" Margin="627,423,0,0" VerticalAlignment="Top" Width="75" Click="Exportbutton_Click"/>
 
     </Grid>
 </Window>

@@ -118,7 +118,7 @@ namespace SoftHardwareMonitor
 
         private void SoftwareTab_Click(object sender, RoutedEventArgs e)
         {
-            Window Softwareablak = new Window();
+            Window2 Softwareablak = new Window2();
             Softwareablak.Show();
         }
     }

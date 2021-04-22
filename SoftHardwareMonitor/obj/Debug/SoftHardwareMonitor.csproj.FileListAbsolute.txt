@@ -28,3 +28,5 @@ X:\Tanulás\Kompl Progó\UjjAdam_SoftHardwareMonitor\SoftHardwareMonitor\obj\Deb
 X:\Tanulás\Kompl Progó\UjjAdam_SoftHardwareMonitor\SoftHardwareMonitor\obj\Debug\SoftHardwareMonitor.csproj.CoreCompileInputs.cache
 X:\Tanulás\Kompl Progó\UjjAdam_SoftHardwareMonitor\SoftHardwareMonitor\obj\Debug\SoftHardwareMonitor.exe
 X:\Tanulás\Kompl Progó\UjjAdam_SoftHardwareMonitor\SoftHardwareMonitor\obj\Debug\SoftHardwareMonitor.pdb
+X:\Tanulás\Kompl Progó\UjjAdam_SoftHardwareMonitor\SoftHardwareMonitor\obj\Debug\Window2.g.cs
+X:\Tanulás\Kompl Progó\UjjAdam_SoftHardwareMonitor\SoftHardwareMonitor\obj\Debug\Window2.baml
